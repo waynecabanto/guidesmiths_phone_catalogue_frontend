@@ -28,8 +28,6 @@ class PhonesList extends Component {
     this.props.getPhones();
     this.props.phoneClicked(0);
   }
-
-  
   
 
   render(){
@@ -52,9 +50,9 @@ class PhonesList extends Component {
         <Grid container spacing={2}>
           {this.props.phones.map((phone)=>(
             <Grid item xs={12} sm={6} md={4}>
-            <PhoneCard phone={phone}/>
+              <PhoneCard phone={phone}/>
             </Grid>
-          ))} 
+          ))}
         </Grid>
       );
     }
