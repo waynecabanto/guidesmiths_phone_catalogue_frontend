@@ -54,13 +54,19 @@ function PhoneCard(props) {
             />
             <CardContent className={classes.content}>
                 <Typography variant="body2" component="p">
-                    {'Color: ' + props.phone.color}
+                    {'Color: '}
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  {props.phone.color}
                 </Typography>
                 <Typography variant="body2" component="p">
-                    {'Price: $ ' + props.phone.price}
+                    {'Price: '}
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  {'€ ' + props.phone.price}
                 </Typography>
                 <Typography variant="body2" component="p">
-                    {'Screen: ' + props.phone.screen}
+                    {'Screen: '}
+                  &nbsp;
+                  {props.phone.screen}
                 </Typography>
             </CardContent>
             <div className={classes.controls}>
@@ -73,7 +79,7 @@ function PhoneCard(props) {
           <CardMedia
             className={classes.cover}
             image={"https://github.com/guidesmiths/interview-code-challenges/blob/master/react/phone-catalogue/images/"+props.phone.imageFileName+"?raw=true"}
-            title="Live from space album cover"
+            title={props.phone.name}
           />
         </Card>
       );

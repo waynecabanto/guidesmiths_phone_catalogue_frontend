@@ -23,6 +23,13 @@ const useStyles = makeStyles((theme) => ({
   },
   giveMarginTop: {
     marginTop: 30,
+  },
+  putMarginRight: {
+    marginRight: 30,
+    display: 'flex'
+  },
+  away:{
+    marginTop: 50
   }
 }));
 
@@ -50,31 +57,41 @@ function PhoneDetails (props){
           <Grid item xs={12} md={6}>
             <Card className={classes.root} variant="outlined">
               <CardContent>
-                <Typography variant="h5" component="h2">
+                <Typography className={classes.away} variant="h5" component="h2">
                   {props.selected_phone.name}
                 </Typography>
                 <Typography variant="h6" component="h2">
                   {props.selected_phone.manufacturer}
                 </Typography>
                 <Typography className={classes.giveMarginTop} variant="body1" component="h2">
-                  {'Color:       ' + props.selected_phone.color}
+                  {'Color: '}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {props.selected_phone.color}
                 </Typography>
                 <Typography variant="body1" component="h2">
-                  {'Screen:      ' + props.selected_phone.screen}
+                  {"Screen:      "}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {props.selected_phone.screen}
                 </Typography>
                 <Typography variant="body1" component="h2">
-                  {'Processor:   ' + props.selected_phone.processor}
+                  {'Processor:   '}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {props.selected_phone.processor}
                 </Typography>
                 <Typography variant="body1" component="h2">
-                  {'RAM:         ' + props.selected_phone.ram}
+                  {'RAM: '}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {props.selected_phone.ram}
                 </Typography>
                 <Typography variant="body1" component="h2">
-                  {'Price:       $' + props.selected_phone.price}
+                  {'Price: '}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {'€ ' + props.selected_phone.price}
                 </Typography>
                 <Typography className={classes.giveMarginTop} variant="subtitle1" component="h2">
                   {'Description: '}
                 </Typography>
-                <Typography variant="subtitle1" component="h2">
+                <Typography variant="subtitle1" align="justify" component="h2">
                   {props.selected_phone.description}
                 </Typography>
               </CardContent>
