@@ -18,11 +18,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '100%', // 16:9
   },
   button: {
-    marginBottom: 50,
-    marginTop: 50
+    marginBottom: 10,
+    marginTop: 10
   },
-  items: {
-    height: '100%'
+  giveMarginTop: {
+    marginTop: 30,
   }
 }));
 
@@ -36,6 +36,7 @@ function PhoneDetails (props){
 
     return (
       <Grid container spacing ={2} direction="column">
+        
         <Grid container item spacing={2} >
           <Grid item xs={12} md={6}>
             <Card className={classes.root} variant="outlined">
@@ -50,28 +51,31 @@ function PhoneDetails (props){
             <Card className={classes.root} variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2">
-                  {'Name: ' + props.selected_phone.name}
+                  {props.selected_phone.name}
                 </Typography>
                 <Typography variant="h6" component="h2">
-                  {'Manufacturer: ' + props.selected_phone.manufacturer}
+                  {props.selected_phone.manufacturer}
+                </Typography>
+                <Typography className={classes.giveMarginTop} variant="body1" component="h2">
+                  {'Color:       ' + props.selected_phone.color}
+                </Typography>
+                <Typography variant="body1" component="h2">
+                  {'Screen:      ' + props.selected_phone.screen}
+                </Typography>
+                <Typography variant="body1" component="h2">
+                  {'Processor:   ' + props.selected_phone.processor}
+                </Typography>
+                <Typography variant="body1" component="h2">
+                  {'RAM:         ' + props.selected_phone.ram}
+                </Typography>
+                <Typography variant="body1" component="h2">
+                  {'Price:       $' + props.selected_phone.price}
+                </Typography>
+                <Typography className={classes.giveMarginTop} variant="subtitle1" component="h2">
+                  {'Description: '}
                 </Typography>
                 <Typography variant="subtitle1" component="h2">
-                  {'Color: ' + props.selected_phone.color}
-                </Typography>
-                <Typography variant="body1" component="h2">
-                  {'Screen: ' + props.selected_phone.screen}
-                </Typography>
-                <Typography variant="body1" component="h2">
-                  {'Processor: ' + props.selected_phone.processor}
-                </Typography>
-                <Typography variant="body1" component="h2">
-                  {'RAM: ' + props.selected_phone.ram}
-                </Typography>
-                <Typography variant="body1" component="h2">
-                  {'Price: $' + props.selected_phone.price}
-                </Typography>
-                <Typography variant="subtitle1" component="h2">
-                  {'Description: ' + props.selected_phone.description}
+                  {props.selected_phone.description}
                 </Typography>
               </CardContent>
             </Card>
