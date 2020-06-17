@@ -4,6 +4,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+
+###From Wayne Cabanto
+
+### online links
+
+The app is deployed online and can be accessible through these links:
+Frontend: https://waynecabanto-guidesmiths-phone-catalogue-app.netlify.app/
+Backend: https://waynecabanto-guidesmiths.herokuapp.com/phones
+
+Frontend Stack: React JS, Redux, Axios and Material UI.
+Backend Stack: Node JS (Express Js) and Mongo DB.
+
+Note: Frontend was deployed in netlify because there was a problem with package.json in Heroku App. 
+
+### node js and npm versions
+NPM Version:
+"npm": "6.13.4"
+
+Node JS Version:
+"node": "12.16.1"
+
+### if deploying it on local server is necessary
+### `npm install`
+This command is necessary to install the dependencies of the app. 
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
